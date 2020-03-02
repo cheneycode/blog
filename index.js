@@ -2,8 +2,10 @@ var express = require('express');
 var app = express();
 var home = require('./route/home')
 var admin = require('./route/admin')
+var reptile = require('./route/reptile')
 app.use('/home', home)
 app.use('/admin', admin)
+app.use('/reptile', reptile)
 
 app.use('/static',express.static(__dirname + '/static'));
 //拦截所有请求
